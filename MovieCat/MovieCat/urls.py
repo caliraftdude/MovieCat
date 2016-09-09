@@ -16,6 +16,9 @@ import app.views
 
 urlpatterns = [
     # Examples:
+    url(r'^hello/$',app.views.hello, name='hello'),
+    url(r'^time/$', app.views.current_datetime, name='time'),
+    url(r'^time/plus/(\d{1,2})/$', app.views.hours_ahead, name='hours_ahead'),
     url(r'^$', app.views.home, name='home'),
     url(r'^contact$', app.views.contact, name='contact'),
     url(r'^about', app.views.about, name='about'),
